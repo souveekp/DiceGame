@@ -6,4 +6,4 @@ Make sure you open the command prompt with the same directory where you have sav
 
 --> javac DiceGame.java 
 
-After that execute --> java DiceGame
+After that execute --> java DiceGame. I am adding some text here so that I can use the git diff tool and see how that works.
