@@ -1,35 +1,6 @@
 import java.util.Random;
 import java.util.Scanner;
 
-class Player{
-	String name;
-	int score;
-	Scanner sc = new Scanner(System.in);
-	public String getName(){
-		return name;
-	}
-	public void setName(String playerNumber){
-		System.out.println("Enter "+playerNumber+" Name");
-		this.name = sc.nextLine();
-	}
-	public int getScore(){
-		return score;
-		// return 7;
-	}
-	public void setScore(int score){
-		this.score = score;
-	}
-}
-
-class Dice{
-	private final int SIDES = 6;
-	Random randomDiceValue = new Random();
-	int roll(){
-		int diceValue = randomDiceValue.nextInt(SIDES) + 1;
-		return diceValue;
-	}
-}
-
 public class DiceGame{
 	Player p1,p2;
 	Dice dice;
@@ -39,7 +10,6 @@ public class DiceGame{
 		System.out.println("1:Play New Game");
 		System.out.println("2:Exit");
 	}
-
 	void selectGameOption(){
 		int optionSelected = 0;
 		Scanner sc = new Scanner(System.in);
@@ -83,11 +53,11 @@ public class DiceGame{
 
 	void playOneRound(Player p){
 		Scanner sc = new Scanner(System.in);
-		System.out.println(p.getName()+" please press any key to roll first die");
+		System.out.println(p.getName()+" please press Enter key to roll first die");
 		sc.nextLine();
 		int firstRoll = dice.roll();
 		System.out.println("Rolled Value: "+firstRoll);
-		System.out.println(p.getName()+" please press any key to roll second die");
+		System.out.println(p.getName()+" please press Enter key to roll second die");
 		sc.nextLine();
 		int secondRoll = dice.roll();
 		System.out.println("Rolled Value: "+secondRoll);
